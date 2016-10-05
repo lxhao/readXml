@@ -1,12 +1,15 @@
 function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
+    //读取xml文件
+    var files = evt.target.files;
     if (files[0]) {
         var reader = new FileReader();
         reader.readAsText(files[0]);
-        reader.onload = loaded;
+//        reader.onload = loaded;
+        reader.onload = readXmlByJs;
     }
 }
 
+//按照设定的布局和样式显示
 function loaded(evt) {
     var fileString = evt.target.result;
     // fileString = fileString.replace(/</g, "&lt");
@@ -44,5 +47,21 @@ function loaded(evt) {
     document.getElementsByName("姓名")[0].innerHTML = "测试姓名";
 }
 
-function showContent() {
+function readXmlByJs(evt) {
+    var xmlDoc;
+    if (window.DOMParser) { // Firefox, Chrome, Opera, etc.
+        var parser = new DOMParser();
+        xmlDoc = parser.parseFromString(evt.target.result, "text/xml");
+    }
+    else { // Internet Explorer
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async = false;
+        xmlDoc.loadXML(evt.target.result);
+    }
+
+    //相当于用二维数组保存所有标签
+    var nodes = xmlDoc.documentElement.childNodes;
+    //根据标签名取值
+    alert(nodes[1].getElementsByTagName("LOGO")[0].textContent);
+     // alert(nodes[1].childNodes[3].innerHTML + "aaaaaa");
 }
