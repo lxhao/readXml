@@ -1,8 +1,14 @@
-<html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
 <head>
+    <!--引入wangEditor.css-->
+    <link rel="stylesheet" type="text/css" href="./dist/css/wangEditor.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--引入jquery和wangEditor.js-->   <!--注意：javascript必须放在body最后，否则可能会出现问题-->
+    <script type="text/javascript" src="./dist/js/lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./dist/js/wangEditor.min.js"></script>
+    <script type="text/javascript" src="./readFile.js">
+    </script>
+
     <style type="text/css">
         body {
             margin: 0;
@@ -58,6 +64,16 @@
     </style>
 </head>
 <body>
+
+<div>
+    <input type="file" id="files"/>
+    <output id="list"></output>
+    <script type="text/javascript">
+        var btn = document.getElementById('files');
+        btn.addEventListener('change', handleFileSelect, false);
+    </script>
+</div>
+
 <table border="0" width="100%" height="1240pt" cellspacing="0" cellpadding="0" valign="top" style="border-color: black">
     <tr height="120pt">
         <td>
@@ -65,16 +81,16 @@
                    style="border-color: black">
                 <tr/>
                 <tr>
-                    <td align="left" valign="top" width="15%"><img height="120pt" width="160pt"
+                    <td align="left" valign="top" width="15%"><img id="logo" height="120pt" width="160pt"
                                                                    src="./img/hospitallogo.png"/></td>
                     <td align="left" valign="top" width="70%">
                         <table border="0" width="100%" cellspacing="0" cellpadding="0" align="center"
                                style="border-color: black">
                             <tr>
-                                <td class="caption1" align="center">qewtuuyiuouiuiouipiopiopi</td>
+                                <td id="hospi-name" class="caption1" align="center">qewtuuyiuouiuiouipiopiopi</td>
                             </tr>
                             <tr>
-                                <td class="caption2" align="center">电子胃镜检查报告</td>
+                                <td id="report-typename" class="caption2" align="center">电子胃镜检查报告</td>
                             </tr>
                         </table>
                     </td>
@@ -87,9 +103,9 @@
         <td>
             <table border="0" width="93%" cellspacing="0" cellpadding="0" align="center" style="border-color: black">
                 <tr>
-                    <td align="left"><font class="cellname">检查号: </font> <font class="cellinput1">S20160831911</font>
+                    <td align="left"><span class="cellname">检查号: </span> <span class="cellinput1">S20160831911</span>
                     </td>
-                    <td align="right"><font class="cellname">镜体: </font><font class="cellinput1">EG-500L</font></td>
+                    <td align="right"><span class="cellname">镜体: </span><span class="cellinput1">EG-500L</span></td>
                 </tr>
             </table>
         </td>
@@ -103,14 +119,15 @@
         <td>
             <table border="0" width="100%" cellspacing="2" cellpadding="0" align="center" style="word-break: break-all">
                 <tr align="left">
-                    <td colspan="2"><font class="cellname">姓名:</font> <font class="cellinput">张三</font></td>
-                    <td width="25%"><font class="cellname">性别:</font> <font class="cellinput">男</font></td>
-                    <td width="25%"><font class="cellname">年龄:</font> <font class="cellinput">12</font></td>
+                    <td colspan="2"><span name="姓名" class="cellname">姓名:</span> <span class="cellinput">张三</span></td>
+                    <td width="25%"><span name="性别" class="cellname">性别:</span> <span class="cellinput">男</span></td>
+                    <td width="25%"><span class="cellname">年龄:</span> <span class="cellinput">12</span></td>
                 </tr>
                 <tr align="left">
-                    <td width="25%"><font class="cellname">住院号:</font> <font class="cellinput">123</font></td>
-                    <td width="25%"><font class="cellname">申请者:</font> <font class="cellinput"/></td>
-                    <td width="25%"><font class="cellname">检查时间:</font> <font class="cellinput">2016-08-31</font></td>
+                    <td width="25%"><textarea id=number class="cellname">住院号:</textarea> <span
+                            class="cellinput">123</span></td>
+                    <td width="25%"><span class="cellname">申请者:</span> <span class="cellinput"/></td>
+                    <td width="25%"><span class="cellname">检查时间:</span> <span class="cellinput">2016-08-31</span></td>
                 </tr>
                 <tr align="left"/>
                 <tr align="left"/>
@@ -132,7 +149,7 @@
                                 <td colspan="2"><img src="./img/S20160831911001.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">胃体</font></td>
+                                <td width="130pt"><span class="cellinput">胃体</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -143,7 +160,7 @@
                                 <td colspan="2"><img src="./img/S20160831911002.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput"/></td>
+                                <td width="130pt"><span class="cellinput"/></td>
                                 <td/>
                             </tr>
                         </table>
@@ -154,7 +171,7 @@
                                 <td colspan="2"><img src="./img/S20160831911003.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">幽门</font></td>
+                                <td width="130pt"><span class="cellinput">幽门</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -165,7 +182,7 @@
                                 <td colspan="2"><img src="./img/S20160831911004.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">胃窦</font></td>
+                                <td width="130pt"><span class="cellinput">胃窦</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -176,7 +193,7 @@
                                 <td colspan="2"><img src="./img/S20160831911005.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput"/></td>
+                                <td width="130pt"><span class="cellinput"/></td>
                                 <td/>
                             </tr>
                         </table>
@@ -189,7 +206,7 @@
                                 <td colspan="2"><img src="./img/S20160831911006.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput"/></td>
+                                <td width="130pt"><span class="cellinput"/></td>
                                 <td/>
                             </tr>
                         </table>
@@ -200,7 +217,7 @@
                                 <td colspan="2"><img src="./img/S20160831911007.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">幽门</font></td>
+                                <td width="130pt"><span class="cellinput">幽门</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -211,7 +228,7 @@
                                 <td colspan="2"><img src="./img/S20160831911008.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">胃角</font></td>
+                                <td width="130pt"><span class="cellinput">胃角</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -222,7 +239,7 @@
                                 <td colspan="2"><img src="./img/S20160831911009.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">十二指肠降部</font></td>
+                                <td width="130pt"><span class="cellinput">十二指肠降部</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -233,7 +250,7 @@
                                 <td colspan="2"><img src="./img/S20160831911010.jpg" width="130pt"/></td>
                             </tr>
                             <tr align="center">
-                                <td width="130pt"><font class="cellinput">十二指肠降部</font></td>
+                                <td width="130pt"><span class="cellinput">十二指肠降部</span></td>
                                 <td/>
                             </tr>
                         </table>
@@ -299,18 +316,38 @@
            style="word-break: break-all; border-color: black">
         <tr height="65pt" align="left" valign="bottom">
             <td width="65%" colspan="1"/>
-            <td width="35%" colspan="1"><font class="cellname1">医生: </font><font class="cellinput">11</font></td>
+            <td width="35%" colspan="1"><span class="cellname1">医生: </span><span class="cellinput">11</span></td>
         </tr>
         <tr>
             <td colspan="2"><br/></td>
         </tr>
         <tr valign="bottom" align="right">
-            <td colspan="2"><font class="cellinput">本报告仅供参考。</font></td>
+            <td colspan="2"><span class="cellinput">本报告仅供参考。</span></td>
         </tr>
         <tr align="right" valign="top">
-            <td colspan="2"><font class="cellname1">打印时间: </font><font class="cellinput">2016-09-09 12:08:08</font></td>
+            <td colspan="2"><span class="cellname1">打印时间: </span><span class="cellinput">2016-09-09 12:08:08</span></td>
         </tr>
     </table>
 </div>
+<button id="test">aaaa</button>
+<script type="text/javascript">
+    // 获取元素
+    var div = document.getElementById('number');
+    // 生成编辑器
+    var editor = new wangEditor(div);
+    div.addEventListener('focus', function () {
+        if (editor) {
+            editor = new wangEditor(div);
+        }
+        editor.create();
+    });
+
+    div.addEventListener('blur', function () {
+        if (editor) {
+            editor.destroy()
+        }
+    });
+</script>
+
 </body>
 </html>
