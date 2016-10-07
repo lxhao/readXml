@@ -1,136 +1,537 @@
-* { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-html,body{background:#00c091 !important ;font-size: 14px;line-height: 1.5;color: #333;letter-spacing:.1px;}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #00c091 !important;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: .1px;
+}
+
 /**/
-.baseItem dl dt .resume_focus:after{top: 6px !important;left: 3px !important;}
-.msgDiv dd .resume_focus:after{top: -1px !important;left: -3px !important;}
-.hobbyDiv dd .resume_focus:after{height: 51px !important;top: 7px;left: 0px;}
+.baseItem dl dt .resume_focus:after {
+    top: 6px !important;
+    left: 3px !important;
+}
+
+.msgDiv dd .resume_focus:after {
+    top: -1px !important;
+    left: -3px !important;
+}
+
+.hobbyDiv dd .resume_focus:after {
+    height: 51px !important;
+    top: 7px;
+    left: 0px;
+}
 
 /*模板结构*/
-.wbd-baseStyle .wbd-divLeft{min-height: 215px;padding:50px 45px 20px 45px;height:auto;}
-.wbd-baseStyle .wbd-divRight{height:auto;padding:50px 35px 0 35px;}
-.wbd-baseStyle .wbd-divLeft .baseItem dl dd{background: none;}
+.wbd-baseStyle .wbd-divLeft {
+    min-height: 215px;
+    padding: 50px 45px 20px 45px;
+    height: auto;
+}
+
+.wbd-baseStyle .wbd-divRight {
+    height: auto;
+    padding: 50px 35px 0 35px;
+}
+
+.wbd-baseStyle .wbd-divLeft .baseItem dl dd {
+    background: none;
+}
 
 /*头像模块*/
-.wbd-baseStyle .headDiv .inner{width:150px;height:200px;margin:0 auto;border:6px solid rgba(255,255,255,0.9);position: relative;overflow: hidden;margin-bottom:10px;float:right;}
-.wbd-baseStyle .headDiv .inner img{display: block;cursor:pointer;}
-.wbd-baseStyle .headDiv .inner .headNotice{position: absolute;cursor:pointer;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);text-align: center;padding-top: 164px;color: rgba(255,255,255,.5); opacity: 0;}
-.wbd-baseStyle .headDiv:hover .headNotice{opacity:1;}
+.wbd-baseStyle .headDiv .inner {
+    width: 150px;
+    height: 200px;
+    margin: 0 auto;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.wbd-baseStyle .headDiv .inner img {
+    display: block;
+    cursor: pointer;
+}
+
+.wbd-baseStyle .headDiv .inner .headNotice {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    padding-top: 164px;
+    color: rgba(255, 255, 255, .5);
+    opacity: 0;
+}
+
+.wbd-baseStyle .headDiv:hover .headNotice {
+    opacity: 1;
+}
 
 /*基本信息模块*/
-.wbd-baseStyle .msgDiv dl dt{display: none;}
-.wbd-baseStyle .msgDiv{float:right;width:505px;padding:16px 0 10px 22px;margin-top:25px;z-index:10;}
-.wbd-baseStyle .msgDiv .baseMsg{color:#fff;margin-bottom:15px;float:left;}
-.wbd-baseStyle .msgDiv .baseMsg a{display: inline-block;font-size:16px;margin-right:4px;vertical-align: middle;color:#fff;height:31px;float: left;}
-.wbd-baseStyle .msgDiv .baseMsg span{width:218px;color:#fff;float: left;}
-.wbd-baseStyle .msgDiv.baseItem dl{padding: 0px;}
-.wbd-baseStyle .msgDiv.baseItem dl dd{padding: 0px;}
-/*姓名、求职意向*/
-.wbd-baseStyle .nameDiv{margin-top: 0px;position:relative;float: left;padding:30px 10px 10px 35px;margin-left:-46px;height: 185px;width:385px;}
-.wbd-baseStyle .nameDiv h1{width:310px;text-align:left;color:#fff;}
-.wbd-baseStyle .nameDiv h2{width:310px;text-align:left;font-weight: lighter;color:#fff;}
+.wbd-baseStyle .msgDiv dl dt {
+    display: none;
+}
 
+.wbd-baseStyle .msgDiv {
+    float: right;
+    width: 505px;
+    padding: 16px 0 10px 22px;
+    margin-top: 25px;
+    z-index: 10;
+}
+
+.wbd-baseStyle .msgDiv .baseMsg {
+    color: #fff;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.wbd-baseStyle .msgDiv .baseMsg a {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+    color: #fff;
+    height: 31px;
+    float: left;
+}
+
+.wbd-baseStyle .msgDiv .baseMsg span {
+    width: 218px;
+    color: #fff;
+    float: left;
+}
+
+.wbd-baseStyle .msgDiv.baseItem dl {
+    padding: 0px;
+}
+
+.wbd-baseStyle .msgDiv.baseItem dl dd {
+    padding: 0px;
+}
+
+/*姓名、求职意向*/
+.wbd-baseStyle .nameDiv {
+    margin-top: 0px;
+    position: relative;
+    float: left;
+    padding: 30px 10px 10px 35px;
+    margin-left: -46px;
+    height: 185px;
+    width: 385px;
+}
+
+.wbd-baseStyle .nameDiv h1 {
+    width: 310px;
+    text-align: left;
+    color: #fff;
+}
+
+.wbd-baseStyle .nameDiv h2 {
+    width: 310px;
+    text-align: left;
+    font-weight: lighter;
+    color: #fff;
+}
 
 /*通用信息*/
-.wbd-baseStyle .baseItem dl{padding:0 25px;}
-.wbd-baseStyle .baseItem dl dt{padding:0px;position:relative;/* margin-top: -14px; */}
-.wbd-baseStyle .baseItem dl dt a{margin-left: 164px;position: absolute;font-size: 45px;}
-.wbd-baseStyle .baseItem dl dt span div.Border{position:absolute;top: 34px;left:212px;width:870px;}
-.wbd-baseStyle .baseItem .baseContent{margin:0px;padding:0px 10px 0 187px;}
-.wbd-baseStyle .baseItem dl dd{padding:0px 10px 25px 0;color:#948b52;}
-.wbd-baseStyle .baseItem .baseContent .conTitle{margin-left:-187px;color:#323232;}
-.wbd-baseStyle .baseItem .baseContent .conTitle span.time{width:174px;}
-.wbd-baseStyle .baseItem .baseContent .conTitle span.company{padding-left:33px;width:499px;}
-.wbd-baseStyle .baseItem .baseContent .conTitle span.post{width:270px;}
-.wbd-baseStyle .baseItem .baseContent .conText{margin-left:20px;}
+.wbd-baseStyle .baseItem dl {
+    padding: 0 25px;
+}
 
-.wbd-baseStyle{background:#fff url(../../editresume/images/jm0225/j1_bottom_bg.png) no-repeat bottom right;}
-.wbd-baseStyle .wbd-divLeft,.jm0225_j1 .wbd-divLeft .selectedItem,.jm0225_j1  .wbd-divLeft.selectedItem:hover{background:#39c0b2 ;}
-.wbd-baseStyle .wbd-divRight{background:url(../../editresume/images/jm0225/j1_head_bg.png) repeat-x 0px 0px;}
-.wbd-baseStyle .baseItem dl dt a{color:#39c0b2;line-height: 34px;height: 34px;}
-.wbd-baseStyle .baseItem dl dt span{color:#39c0b2;}
-.wbd-baseStyle .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j1_span_bg.png) no-repeat 0px center;}
-.wbd-baseStyle .baseItem dd{background:url(../../editresume/images/jm0225/j1_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem dl dt {
+    padding: 0px;
+    position: relative; /* margin-top: -14px; */
+}
 
-.jm0225_j1{background:#fff url(../../editresume/images/jm0225/j1_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j1 .wbd-divLeft,.jm0225_j1 .wbd-divLeft .selectedItem,.jm0225_j1  .wbd-divLeft.selectedItem:hover{background:#39c0b2 ;}
-.jm0225_j1 .wbd-divRight{background:url(../../editresume/images/jm0225/j1_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j1 .baseItem dl dt a{color:#39c0b2;}
-.jm0225_j1 .baseItem dl dt span{color:#39c0b2;}
-.jm0225_j1 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#39c0b2;border-top-width:2px;}
-.jm0225_j1 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j1_span_bg.png) no-repeat 0px center;}
-.jm0225_j1 .baseItem dd{background:url(../../editresume/images/jm0225/j1_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem dl dt a {
+    margin-left: 164px;
+    position: absolute;
+    font-size: 45px;
+}
 
-.jm0225_j2{background:#fff url(../../editresume/images/jm0225/j2_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j2 .wbd-divLeft,.jm0225_j2 .wbd-divLeft .selectedItem,.jm0225_j2  .wbd-divLeft.selectedItem:hover{background:#788093 ;}
-.jm0225_j2 .wbd-divRight{background:url(../../editresume/images/jm0225/j2_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j2 .baseItem dl dt a{color:#788093;}
-.jm0225_j2 .baseItem dl dt span{color:#788093;}
-.jm0225_j2 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#788093;border-top-width:2px;}
-.jm0225_j2 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j2_span_bg.png) no-repeat 0px center;}
-.jm0225_j2 .baseItem dd{background:url(../../editresume/images/jm0225/j2_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem dl dt span div.Border {
+    position: absolute;
+    top: 34px;
+    left: 212px;
+    width: 870px;
+}
 
+.wbd-baseStyle .baseItem .baseContent {
+    margin: 0px;
+    padding: 0px 10px 0 187px;
+}
 
-.jm0225_j3{background:#fff url(../../editresume/images/jm0225/j3_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j3 .wbd-divLeft,.jm0225_j3 .wbd-divLeft .selectedItem,.jm0225_j3  .wbd-divLeft.selectedItem:hover{background:#33aefc;}
-.jm0225_j3 .wbd-divRight{background:url(../../editresume/images/jm0225/j3_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j3 .baseItem dl dt a{color:#33aefc;}
-.jm0225_j3 .baseItem dl dt span{color:#33aefc;}
-.jm0225_j3 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#33aefc;border-top-width:2px;}
-.jm0225_j3 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j3_span_bg.png) no-repeat 0px center;}
-.jm0225_j3 .baseItem dd{background:url(../../editresume/images/jm0225/j3_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem dl dd {
+    padding: 0px 10px 25px 0;
+    color: #948b52;
+}
 
+.wbd-baseStyle .baseItem .baseContent .conTitle {
+    margin-left: -187px;
+    color: #323232;
+}
 
-.jm0225_j4{background:#fff url(../../editresume/images/jm0225/j4_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j4 .wbd-divLeft,.jm0225_j4 .wbd-divLeft .selectedItem,.jm0225_j4  .wbd-divLeft.selectedItem:hover{background:#ee6e50;}
-.jm0225_j4 .wbd-divRight{background:url(../../editresume/images/jm0225/j4_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j4 .baseItem dl dt a{color:#ee6e50;}
-.jm0225_j4 .baseItem dl dt span{color:#ee6e50;}
-.jm0225_j4 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#ee6e50;border-top-width:2px;}
-.jm0225_j4 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j4_span_bg.png) no-repeat 0px center;}
-.jm0225_j4 .baseItem dd{background:url(../../editresume/images/jm0225/j4_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem .baseContent .conTitle span.time {
+    width: 174px;
+}
 
-.jm0225_j5{background:#fff url(../../editresume/images/jm0225/j5_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j5 .wbd-divLeft,.jm0225_j5 .wbd-divLeft .selectedItem,.jm0225_j5  .wbd-divLeft.selectedItem:hover{background:#f3c715;}
-.jm0225_j5 .wbd-divRight{background:url(../../editresume/images/jm0225/j5_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j5 .baseItem dl dt a{color:#f3c715;}
-.jm0225_j5 .baseItem dl dt span{color:#f3c715;}
-.jm0225_j5 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#f3c715;border-top-width:2px;}
-.jm0225_j5 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j5_span_bg.png) no-repeat 0px center;}
-.jm0225_j5 .baseItem dd{background:url(../../editresume/images/jm0225/j5_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem .baseContent .conTitle span.company {
+    padding-left: 33px;
+    width: 499px;
+}
 
+.wbd-baseStyle .baseItem .baseContent .conTitle span.post {
+    width: 270px;
+}
 
-.jm0225_j6{background:#fff url(../../editresume/images/jm0225/j6_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j6 .wbd-divLeft,.jm0225_j6 .wbd-divLeft .selectedItem,.jm0225_j6  .wbd-divLeft.selectedItem:hover{background:#4d4d4d;}
-.jm0225_j6 .wbd-divRight{background:url(../../editresume/images/jm0225/j6_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j6 .baseItem dl dt a{color:#4d4d4d;}
-.jm0225_j6 .baseItem dl dt span{color:#4d4d4d;}
-.jm0225_j6 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#4d4d4d;border-top-width:2px;}
-.jm0225_j6 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j6_span_bg.png) no-repeat 0px center;}
-.jm0225_j6 .baseItem dd{background:url(../../editresume/images/jm0225/j6_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .baseItem .baseContent .conText {
+    margin-left: 20px;
+}
 
-.jm0225_j7{background:#fff url(../../editresume/images/jm0225/j7_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j7 .wbd-divLeft,.jm0225_j7 .wbd-divLeft .selectedItem,.jm0225_j7  .wbd-divLeft.selectedItem:hover{background:#AA8460;}
-.jm0225_j7 .wbd-divRight{background:url(../../editresume/images/jm0225/j7_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j7 .baseItem dl dt a{color:#aa8460;}
-.jm0225_j7 .baseItem dl dt span{color:#aa8460;}
-.jm0225_j7 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#aa8460;border-top-width:2px;}
-.jm0225_j7 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j7_span_bg.png) no-repeat 0px center;}
-.jm0225_j7 .baseItem dd{background:url(../../editresume/images/jm0225/j7_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle {
+    background: #fff url(../../editresume/images/jm0225/j1_bottom_bg.png) no-repeat bottom right;
+}
 
-.jm0225_j8{background:#fff url(../../editresume/images/jm0225/j8_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j8 .wbd-divLeft,.jm0225_j8 .wbd-divLeft .selectedItem,.jm0225_j8  .wbd-divLeft.selectedItem:hover{background:#76BA31;}
-.jm0225_j8 .wbd-divRight{background:url(../../editresume/images/jm0225/j8_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j8 .baseItem dl dt a{color:#76ba31;}
-.jm0225_j8 .baseItem dl dt span{color:#76ba31;}
-.jm0225_j8 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#76ba31;border-top-width:2px;}
-.jm0225_j8 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j8_span_bg.png) no-repeat 0px center;}
-.jm0225_j8 .baseItem dd{background:url(../../editresume/images/jm0225/j8_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .wbd-divLeft, .jm0225_j1 .wbd-divLeft .selectedItem, .jm0225_j1 .wbd-divLeft.selectedItem:hover {
+    background: #39c0b2;
+}
 
-.jm0225_j9{background:#fff url(../../editresume/images/jm0225/j9_bottom_bg.png) no-repeat bottom right;}
-.jm0225_j9 .wbd-divLeft,.jm0225_j9 .wbd-divLeft .selectedItem,.jm0225_j9  .wbd-divLeft.selectedItem:hover{background:#647EC9;}
-.jm0225_j9 .wbd-divRight{background:url(../../editresume/images/jm0225/j9_head_bg.png) repeat-x 0px 0px;}
-.jm0225_j9 .baseItem dl dt a{color:#647ec9;}
-.jm0225_j9 .baseItem dl dt span{color:#647ec9;}
-.jm0225_j9 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#647ec9;border-top-width:2px;}
-.jm0225_j9 .baseItem .baseContent .conTitle span.company{background:url(../../editresume/images/jm0225/j9_span_bg.png) no-repeat 0px center;}
-.jm0225_j9 .baseItem dd{background:url(../../editresume/images/jm0225/j9_ddbg.png) repeat-y 187px 0px;}
+.wbd-baseStyle .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j1_head_bg.png) repeat-x 0px 0px;
+}
+
+.wbd-baseStyle .baseItem dl dt a {
+    color: #39c0b2;
+    line-height: 34px;
+    height: 34px;
+}
+
+.wbd-baseStyle .baseItem dl dt span {
+    color: #39c0b2;
+}
+
+.wbd-baseStyle .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j1_span_bg.png) no-repeat 0px center;
+}
+
+.wbd-baseStyle .baseItem dd {
+    background: url(../../editresume/images/jm0225/j1_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j1 {
+    background: #fff url(../../editresume/images/jm0225/j1_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j1 .wbd-divLeft, .jm0225_j1 .wbd-divLeft .selectedItem, .jm0225_j1 .wbd-divLeft.selectedItem:hover {
+    background: #39c0b2;
+}
+
+.jm0225_j1 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j1_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j1 .baseItem dl dt a {
+    color: #39c0b2;
+}
+
+.jm0225_j1 .baseItem dl dt span {
+    color: #39c0b2;
+}
+
+.jm0225_j1 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #39c0b2;
+    border-top-width: 2px;
+}
+
+.jm0225_j1 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j1_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j1 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j1_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j2 {
+    background: #fff url(../../editresume/images/jm0225/j2_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j2 .wbd-divLeft, .jm0225_j2 .wbd-divLeft .selectedItem, .jm0225_j2 .wbd-divLeft.selectedItem:hover {
+    background: #788093;
+}
+
+.jm0225_j2 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j2_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j2 .baseItem dl dt a {
+    color: #788093;
+}
+
+.jm0225_j2 .baseItem dl dt span {
+    color: #788093;
+}
+
+.jm0225_j2 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #788093;
+    border-top-width: 2px;
+}
+
+.jm0225_j2 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j2_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j2 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j2_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j3 {
+    background: #fff url(../../editresume/images/jm0225/j3_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j3 .wbd-divLeft, .jm0225_j3 .wbd-divLeft .selectedItem, .jm0225_j3 .wbd-divLeft.selectedItem:hover {
+    background: #33aefc;
+}
+
+.jm0225_j3 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j3_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j3 .baseItem dl dt a {
+    color: #33aefc;
+}
+
+.jm0225_j3 .baseItem dl dt span {
+    color: #33aefc;
+}
+
+.jm0225_j3 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #33aefc;
+    border-top-width: 2px;
+}
+
+.jm0225_j3 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j3_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j3 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j3_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j4 {
+    background: #fff url(../../editresume/images/jm0225/j4_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j4 .wbd-divLeft, .jm0225_j4 .wbd-divLeft .selectedItem, .jm0225_j4 .wbd-divLeft.selectedItem:hover {
+    background: #ee6e50;
+}
+
+.jm0225_j4 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j4_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j4 .baseItem dl dt a {
+    color: #ee6e50;
+}
+
+.jm0225_j4 .baseItem dl dt span {
+    color: #ee6e50;
+}
+
+.jm0225_j4 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #ee6e50;
+    border-top-width: 2px;
+}
+
+.jm0225_j4 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j4_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j4 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j4_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j5 {
+    background: #fff url(../../editresume/images/jm0225/j5_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j5 .wbd-divLeft, .jm0225_j5 .wbd-divLeft .selectedItem, .jm0225_j5 .wbd-divLeft.selectedItem:hover {
+    background: #f3c715;
+}
+
+.jm0225_j5 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j5_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j5 .baseItem dl dt a {
+    color: #f3c715;
+}
+
+.jm0225_j5 .baseItem dl dt span {
+    color: #f3c715;
+}
+
+.jm0225_j5 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #f3c715;
+    border-top-width: 2px;
+}
+
+.jm0225_j5 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j5_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j5 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j5_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j6 {
+    background: #fff url(../../editresume/images/jm0225/j6_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j6 .wbd-divLeft, .jm0225_j6 .wbd-divLeft .selectedItem, .jm0225_j6 .wbd-divLeft.selectedItem:hover {
+    background: #4d4d4d;
+}
+
+.jm0225_j6 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j6_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j6 .baseItem dl dt a {
+    color: #4d4d4d;
+}
+
+.jm0225_j6 .baseItem dl dt span {
+    color: #4d4d4d;
+}
+
+.jm0225_j6 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #4d4d4d;
+    border-top-width: 2px;
+}
+
+.jm0225_j6 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j6_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j6 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j6_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j7 {
+    background: #fff url(../../editresume/images/jm0225/j7_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j7 .wbd-divLeft, .jm0225_j7 .wbd-divLeft .selectedItem, .jm0225_j7 .wbd-divLeft.selectedItem:hover {
+    background: #AA8460;
+}
+
+.jm0225_j7 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j7_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j7 .baseItem dl dt a {
+    color: #aa8460;
+}
+
+.jm0225_j7 .baseItem dl dt span {
+    color: #aa8460;
+}
+
+.jm0225_j7 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #aa8460;
+    border-top-width: 2px;
+}
+
+.jm0225_j7 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j7_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j7 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j7_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j8 {
+    background: #fff url(../../editresume/images/jm0225/j8_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j8 .wbd-divLeft, .jm0225_j8 .wbd-divLeft .selectedItem, .jm0225_j8 .wbd-divLeft.selectedItem:hover {
+    background: #76BA31;
+}
+
+.jm0225_j8 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j8_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j8 .baseItem dl dt a {
+    color: #76ba31;
+}
+
+.jm0225_j8 .baseItem dl dt span {
+    color: #76ba31;
+}
+
+.jm0225_j8 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #76ba31;
+    border-top-width: 2px;
+}
+
+.jm0225_j8 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j8_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j8 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j8_ddbg.png) repeat-y 187px 0px;
+}
+
+.jm0225_j9 {
+    background: #fff url(../../editresume/images/jm0225/j9_bottom_bg.png) no-repeat bottom right;
+}
+
+.jm0225_j9 .wbd-divLeft, .jm0225_j9 .wbd-divLeft .selectedItem, .jm0225_j9 .wbd-divLeft.selectedItem:hover {
+    background: #647EC9;
+}
+
+.jm0225_j9 .wbd-divRight {
+    background: url(../../editresume/images/jm0225/j9_head_bg.png) repeat-x 0px 0px;
+}
+
+.jm0225_j9 .baseItem dl dt a {
+    color: #647ec9;
+}
+
+.jm0225_j9 .baseItem dl dt span {
+    color: #647ec9;
+}
+
+.jm0225_j9 .baseItem dl dt span div.Border {
+    border-top-style: solid;
+    border-top-color: #647ec9;
+    border-top-width: 2px;
+}
+
+.jm0225_j9 .baseItem .baseContent .conTitle span.company {
+    background: url(../../editresume/images/jm0225/j9_span_bg.png) no-repeat 0px center;
+}
+
+.jm0225_j9 .baseItem dd {
+    background: url(../../editresume/images/jm0225/j9_ddbg.png) repeat-y 187px 0px;
+}

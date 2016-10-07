@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="jsCss/bootstrap.min.css"/>
     <link rel="stylesheet" href="jsCss/zxbj_base.css"/>
     <link rel="stylesheet" href="jsCss/layer.css"/>
-    <link rel="stylesheet" href="jsCss/edit.css"/>
+    <link rel="stylesheet" href="jsCss/my_edit.css"/>
     <link rel="stylesheet" href="jsCss/cropper.min.css"/>
     <link rel="stylesheet" href="jsCss/colpick.css"/>
     <script type="text/javascript" src="jsCss/layer.js"></script>
@@ -43,7 +43,7 @@
 
 <div class="wbdzx-container ">
     <div class="wbd-baseStyle clearfix jm0225_j1" id="resume_body" version="v4">
-        <div class=" baseItem baseSort baseItem  resume_custom resume_custom_delete_area resume_add_area resume_sort"
+        <div class="baseItem baseSort baseItem  resume_custom resume_custom_delete_area resume_add_area resume_sort"
              id="85aecc4a64bd4cbc09763fd97e6f2e76" for-key="85aecc4a64bd4cbc09763fd97e6f2e76">
             <dl>
                 <dt class="clearfix">
@@ -131,6 +131,71 @@
                     </div>
                 </dd>
             </dl>
+        </div>
+    </div>
+</div>
+<!--右侧浮块-->
+<div class="wbdzx-barR">
+    <a href="http://help.500d.me" target="_blank"><i class="wbdfont">&#xe766;</i>帮助</a>
+</div>
+<!--顶部浮动块-->
+<div class="wbdzx-header">
+    <div class="inner">
+        <div class="left">
+            <a class="logo" href="http://www.sonoscape.com.cn/cn/AboutSonoScape/publicPage.aspx"><img
+                    src="./images/kl_logo.jpg"/></a>
+        </div>
+        <div class="center">
+            <div class="changeInput"><input type="text" id="resumeTitle" placeholder="点击修改报告名称" data_value="中南大学"
+                                            value="中南大学"></div>
+            <input type="hidden" id="hidden_data_resume_language" value="zh"/>
+        </div>
+        <div class="right">
+            <div class="toolbar">
+                <ul>
+                    <li class="preview">
+                        <a href="/resume/lxhao/" id="preview_btn" target="_blank"><i class="wbdfont">&#xe764;</i>预览</a>
+                    </li>
+                    <li class="save">
+                        <a class="wbdfont saveBtn" href="javascript:;" title="保存">&#xe767;</a>
+                        &nbsp;
+                        <a class="wbdfont dlown_btn" title="下载PDF" href="/editresume/export/?resume=302053&item=10"
+                           target="_blank">&#xe76b;</a>
+                    </li>
+                    <li>
+                        <a class="wbdfont" onclick="execCommand('undo')" href="javascript:;" title="撤销ctrl+z">
+                            &#xe76a;</a>
+                        <a class="wbdfont" onclick="execCommand('redo') " href="javascript:;" title="返回ctrl+y">
+                            &#xe769;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--左侧浮动块-->
+<div class="wbdzx-toolbar">
+    <ul>
+        <li><a class="imResumeBtn" href="javascript:;"><i class="wbdfont">&#xe76c;</i>导入诊单</a></li>
+        <li><a class="uResumeBtn" href="javascript:;"><i class="wbdfont">&#xe75e;</i>更换模板</a></li>
+        <li><a class="iResumeBtn" href="javascript:;"><i class="wbdfont">&#xe75d;</i>模块管理</a></li>
+        <li><a class="setResumeBtn" href="javascript:;"><i class="wbdfont">&#xe75f;</i>诊单设置</a></li>
+    </ul>
+</div>
+
+<!--删除提示框-->
+<div class="modal fade promptModal" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content clearfix">
+            <div class="left"><img src="http://static.500d.me/resources/500d/editresume/images/zxbj/error.png"/></div>
+            <div class="right text">
+                <p id="confirmContent">三思啊主公~<br/>执行删除操作后将无法恢复!</p>
+                <div class="mbtn">
+                    <button type="submit" id="confirmCancel" data-dismiss="modal" aria-hidden="true">朕再想想</button>
+                    <button class="reset" type="reset" id="confirmSuccess">朕意已决</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
