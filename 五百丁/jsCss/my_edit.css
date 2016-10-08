@@ -1,10 +1,107 @@
 
 html, body {
+    background: #00c091 !important;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: .1px;
+}
+
+html, body {
     font-family: \5FAE\8F6F\96C5\9ED1;
     font-size: 14px;
     line-height: 1.5;
     min-width: 1350px;
     color: #333;
+}
+
+html, body {
+    background: #00c091 !important;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    letter-spacing: .1px;
+}
+
+/*模板结构*/
+.wbd-baseStyle .wbd-divLeft {
+    min-height: 215px;
+    padding: 50px 45px 20px 45px;
+    height: auto;
+}
+
+.wbd-baseStyle .wbd-divRight {
+    height: auto;
+    padding: 50px 35px 0 35px;
+}
+
+.wbd-baseStyle .wbd-divLeft .baseItem dl dd {
+    background: none;
+}
+
+/*通用信息*/
+.wbd-baseStyle .baseItem dl {
+    padding: 0 25px;
+}
+
+.wbd-baseStyle .baseItem dl dt {
+    padding: 0px;
+    position: relative; /* margin-top: -14px; */
+}
+
+.wbd-baseStyle .baseItem dl dt a {
+    margin-left: 164px;
+    position: absolute;
+    font-size: 45px;
+}
+
+.wbd-baseStyle .baseItem dl dt span div.Border {
+    position: absolute;
+    top: 34px;
+    left: 212px;
+    width: 870px;
+}
+
+.wbd-baseStyle .baseItem .baseContent {
+    margin: 0px;
+    padding: 0px 10px 0 187px;
+}
+
+.wbd-baseStyle .baseItem dl dd {
+    padding: 0px 10px 25px 0;
+    color: #948b52;
+}
+
+
+.wbd-baseStyle .baseItem .baseContent .conText {
+    margin-left: 20px;
+}
+
+.wbd-baseStyle {
+    background: #fff url(../images/j1_bottom_bg.png) no-repeat bottom right;
+}
+
+.wbd-baseStyle .wbd-divLeft {
+    background: #39c0b2;
+}
+
+.wbd-baseStyle .wbd-divRight {
+    background: url(../images/j1_head_bg.png) repeat-x 0px 0px;
+}
+
+.wbd-baseStyle .baseItem dl dt a {
+    color: #39c0b2;
+    line-height: 34px;
+    height: 34px;
+}
+
+.wbd-baseStyle .baseItem dl dt span {
+    color: #39c0b2;
+}
+
+
+.wbd-baseStyle .baseItem dd {
+    background: url(../images/j1_ddbg.png) repeat-y 187px 0px;
 }
 
 @font-face {
