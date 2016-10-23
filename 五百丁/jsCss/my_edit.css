@@ -1,26 +1,60 @@
 
-html, body {
-    background: #00c091 !important;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333;
-    letter-spacing: .1px;
+.caption1 {
+    text-align: center;
+    color: black;
+    font: 30pt "文泉驿微米黑";
+    font-weight: bold;
+}
+
+.caption2 {
+    text-align: center;
+    color: black;
+    font: 20pt "文泉驿微米黑";
+}
+
+.chspace {
+    text-align: center;
+    color: white;
+    font: 70px "文泉驿微米黑";
+}
+
+.cellname {
+    display: inline-block;
+    *display: inline;
+    text-align: left;
+    color: black;
+    font: 12pt "文泉驿微米黑";
+    font-weight: bold;
+}
+
+.cellinput {
+    text-align: left;
+    color: black;
+    font: 12pt "文泉驿微米黑";
+}
+
+.cellname1 {
+    text-align: left;
+    color: black;
+    font: 14pt "文泉驿微米黑";
+    font-weight: bold;
+}
+
+.cellinput1 {
+    text-align: center;
+    color: black;
+    font: 12pt "文泉驿微米黑";
+    font-weight: bold;
 }
 
 html, body {
-    font-family: \5FAE\8F6F\96C5\9ED1;
-    font-size: 14px;
+    background: #00c091 !important;
     line-height: 1.5;
+    color: #333;
     min-width: 1350px;
-    color: #333;
-}
-
-html, body {
-    background: #00c091 !important;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333;
     letter-spacing: .1px;
+    margin: 0;
+    font-size: 12pt;
 }
 
 /*模板结构*/
@@ -64,7 +98,7 @@ html, body {
 
 .wbd-baseStyle .baseItem .baseContent {
     margin: 0px;
-    padding: 0px 10px 0 187px;
+    padding: 0px 10px 0 0px;
 }
 
 .wbd-baseStyle .baseItem dl dd {
@@ -72,9 +106,21 @@ html, body {
     color: #948b52;
 }
 
-
 .wbd-baseStyle .baseItem .baseContent .conText {
     margin-left: 20px;
+}
+
+.wbd-baseStyle .baseItem .baseContent .conText .baseMsg {
+    width: 23%;
+    float: left;
+    text-align: center;
+}
+
+.wbd-baseStyle .baseItem .baseContent .conText .line {
+    margin-left: 20px;
+    width: 100%;
+    height: 1pt;
+    background-color: #3a95be;
 }
 
 .wbd-baseStyle {
@@ -98,7 +144,6 @@ html, body {
 .wbd-baseStyle .baseItem dl dt span {
     color: #39c0b2;
 }
-
 
 .wbd-baseStyle .baseItem dd {
     background: url(../images/j1_ddbg.png) repeat-y 187px 0px;
@@ -535,7 +580,7 @@ a:link {
 .wbdzx-container {
     width: 1112px;
     min-height: auto;
-    border: 1px solid #2bd8ae;
+    border: 0px solid #2bd8ae;
     margin: 112px auto;
     padding: 5px;
 }
@@ -773,6 +818,86 @@ a:link {
 
 .promptModal .modal-content .mbtn button:active {
     opacity: 9;
+}
+
+/*导入文件*/
+.imResumeModal .modal-dialog {
+    position: absolute;
+    width: 550px;
+    height: 283px;
+    background: #fff url(../images/solid.png) no-repeat center;
+    top: 50%;
+    left: 50%;
+    margin-top: -142px;
+    margin-left: -275px;
+}
+
+.imResumeModal .modal-content .modal-text {
+    text-align: center;
+    width: 100%;
+}
+
+.imResumeModal .modal-content .modal-text .form-div {
+    height: 36px;
+    margin-bottom: 10px;
+}
+
+.imResumeModal .modal-content .modal-text i {
+    font-size: 90px;
+    color: #00c091;
+}
+
+.imResumeModal .modal-content .modal-text p {
+    color: #6e6e6e;
+    height: 45px;
+}
+
+.imResumeModal .modal-content .modal-text .file {
+    background: url(../images/zx_index_sp.png) no-repeat 175px -1138px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    width: 210px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.imResumeModal .modal-content .modal-text .file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    width: 210px;
+    height: 30px;
+}
+
+.imResumeModal .modal-content .modal-text .file:hover {
+    background: url(../images/zx_index_sp.png) no-repeat 175px -1138px;
+    border-color: #00b98c;
+    color: #00c091;
+    text-decoration: none;
+}
+
+.imResumeModal .modal-content .modal-text .fbtn {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 25px;
+    background: #fff;
+    border: 1px solid #00c091;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #00c091;
+}
+
+.imResumeModal .modal-content .modal-text .fbtn:hover {
+    background: #00c091;
+    color: #fff;
+}
+
+.imResumeModal .modal-content .modal-text .fbtn:active {
+    background: #07a27c;
+    color: #016b51;
 }
 
 /*文字工具*/
@@ -1166,3 +1291,31 @@ a:link {
     cursor: move;
 }
 
+/*返回顶部*/
+.gotopShow {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    cursor: pointer;
+    background: #00c091 url(../images/gotop.png) no-repeat center 5px;
+    z-index: 10000;
+    transition: all 0.3s;
+}
+
+/*基本信息*/
+
+.wbd-baseStyle .msgDiv .baseMsg { /*height: 40px;line-height: 40px;*/
+    text-align: center;
+    border: 1px dashed transparent;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.baseStyle .msgDiv .baseMsg {
+    font-size: 16px;
+}
+
+/*导入文件*/

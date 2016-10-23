@@ -1,5 +1,51 @@
 $(document).ready(function () {
 
+    //导入文件
+    $("#improt_reume_btn").click(function () {
+        // 检查文件是否选择:
+
+        var name = $("#filename").val();
+        if (!name) {
+            alert("没有选择文件");
+            return;
+        }
+
+        $(".div_upload").find("p").text(name);
+        var fileName = name.substring(name.lastIndexOf("\\") + 1);
+        var fileType = name.substring(name.lastIndexOf(".") + 1);
+        $("#fileName").val(fileName);
+        if (fileType.toLocaleLowerCase() != "xml" ) {
+            alert("只支持xml文件格式！");
+            return;
+        }
+
+        var file = $("#filename").get(0).files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = readXmlByJs;
+        }
+    });
+
+    function readXmlByJs(evt) {
+        var xmlDoc;
+        if (window.DOMParser) { // Firefox, Chrome, Opera, etc.
+            var parser = new DOMParser();
+            xmlDoc = parser.parseFromString(evt.target.result, "text/xml");
+        }
+        else { // Internet Explorer
+            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            xmlDoc.async = false;
+            xmlDoc.loadXML(evt.target.result);
+        }
+
+        //相当于用二维数组保存所有标签
+        var nodes = xmlDoc.documentElement.childNodes;
+        //根据标签名取值
+        alert(nodes[1].getElementsByTagName("LOGO")[0].textContent);
+        // alert(nodes[1].childNodes[3].innerHTML + "aaaaaa");
+    }
+
     //交互样式
     function resumeDelete() {
         $(".baseDel .delete").live("mouseover", function () {
@@ -798,5 +844,15 @@ $(document).ready(function () {
         console.log(select_template_page);
         reload_template_list();
     });
+    //预览
+    $(".preview").click(function () {
+        //隐藏侧边栏
+        $(".wbdzx-barR").css("display", "none");
+        $(".wbdzx-header").css("display", "none");
+        $(".wbdzx-toolbar").css("display", "none");
 
+        //文本不可编辑
+        $(".wbdzx-container").addClass("resetEditStyle");
+        $(".wbdzx-container").prepend('<div class="no_edit_background"></div>');
+    });
 });
