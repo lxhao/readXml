@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     //导入文件
-    $("#improt_reume_btn").click(function () {
+    $("#filename").live("change", function () {
         // 检查文件是否选择:
         var name = $("#filename").val();
         if (!name) {
-            alert("没有选择文件");
+            layer.msg("没有选择文件!");
             return;
         }
 
@@ -14,15 +14,20 @@ $(document).ready(function () {
         var fileType = name.substring(name.lastIndexOf(".") + 1);
         $("#fileName").val(fileName);
         if (fileType.toLocaleLowerCase() != "xml") {
-            alert("只支持xml文件格式！");
+            layer.msg("只支持xml文件格式！");
             return;
         }
 
         var file = $("#filename").get(0).files[0];
+        // console.log(file.val());
         if (file) {
             var reader = new FileReader();
             reader.readAsText(file);
             reader.onload = readXmlByJs;
+            //隐藏导入文件提示框
+            $('#imResumeModal').modal('hide');
+        } else {
+            alert("没有选择文件");
         }
     });
 

@@ -48,7 +48,7 @@
             var i = "function" == typeof d, j = e.config.skin, k = (j ? j + " " + j + "-msg" : "") || "layui-layer-msg", l = h.anim.length - 1;
             return i && (g = d), f.open(c.extend({
                 content: a,
-                time: 1000,
+                time: 2000,
                 shade: !1,
                 skin: k,
                 title: !1,

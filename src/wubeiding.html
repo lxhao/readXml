@@ -53,13 +53,12 @@
         <div class="modal-content clearfix">
             <div class="modal-text">
                 <i class="wbdfont">&#xe75c;</i>
-                <p>请上传已有的本地简历<br/>(doc,docx,pdf)</p>
+                <p>请选择检查报告文件<br/>(xml)</p>
                 <div class="form-div  div_upload">
-                    <a href="javascript:;" class="file" id="improt_reume_file"><p></p><input type="file"
-                                                                                             name="filename"
-                                                                                             id="filename"/></a>
+                    <a href="javascript:;" class="file" id="improt_reume_file">
+                        <p></p><input type="file" name="filename" id="filename"/></a>
                 </div>
-                <button class="fbtn" id="improt_reume_btn">提交</button>
+                <!--<button class="fbtn" id="improt_reume_btn">提交</button>-->
             </div>
         </div>
     </div>
@@ -141,7 +140,7 @@
     </button>
     <script>
         $("#test").live("click", function () {
-            alert($(".caption1").get(0).innerHTML);
+            alert($("#filename").get(0).files[0].val());
         });
     </script>
     <!--编辑区域-->
@@ -886,7 +885,7 @@
                                 <p class="cellname1">
                                     检查部位：</p>
                                 <p class="biopsy cellinput">
-                                   1慢性食道炎
+                                    1慢性食道炎
                                 </p>
                             </div>
                         </div>
